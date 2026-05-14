@@ -1,79 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    app:cardCornerRadius="14dp"
-    app:cardElevation="3dp"
-    app:cardUseCompatPadding="true">
+    android:layout_height="86dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="2dp"
+    android:paddingEnd="2dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tv_rank"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="15sp"
+        android:textColor="#3C4043" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_app_icon"
+        android:padding="2dp"
+        android:src="@drawable/app1" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="12dp">
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="8dp">
 
         <TextView
-            android:id="@+id/tv_rank"
-            android:layout_width="32dp"
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="#111827"
-            android:gravity="center" />
+            android:text="Subway Surfers"
+            android:textSize="15sp"
+            android:textColor="#202124"
+            android:maxLines="1"
+            android:ellipsize="end" />
 
-        <ImageView
-            android:id="@+id/iv_icon"
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="10dp"
-            android:scaleType="centerCrop"
-            android:background="#F3F4F6"
-            android:padding="6dp"
-            android:src="@drawable/app1" />
-
-        <LinearLayout
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginStart="12dp">
+            android:text="SYBO Games"
+            android:textSize="13sp"
+            android:textColor="#5F6368"
+            android:layout_marginTop="3dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
 
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="App Name"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:textColor="#111827"
-                android:maxLines="1"
-                android:ellipsize="end" />
-
-            <TextView
-                android:id="@+id/tv_category"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Category"
-                android:textSize="13sp"
-                android:textColor="#6B7280"
-                android:layout_marginTop="2dp"
-                android:maxLines="1"
-                android:ellipsize="end" />
-
-            <TextView
-                android:id="@+id/tv_meta"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="★ 4.5 • 161 MB"
-                android:textSize="13sp"
-                android:textColor="#374151"
-                android:layout_marginTop="6dp" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_meta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="★ 4.4   •   187 MB"
+            android:textSize="12sp"
+            android:textColor="#5F6368"
+            android:layout_marginTop="4dp" />
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="28dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="⋮"
+        android:textSize="20sp"
+        android:textColor="#5F6368" />
+
+</LinearLayout>

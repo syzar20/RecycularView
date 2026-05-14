@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,11 +38,6 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.VH> {
         h.tvName.setText(item.getName());
         h.tvCategory.setText(item.getCategory());
         h.tvMeta.setText("★ " + item.getRating() + "   •   " + item.getSize());
-
-
-        h.itemView.setOnClickListener(v ->
-                Toast.makeText(context, "Clicked: " + item.getName(), Toast.LENGTH_SHORT).show()
-        );
     }
 
     @Override
@@ -57,6 +51,7 @@ public class AppAdapter extends RecyclerView.Adapter<AppAdapter.VH> {
 
         public VH(@NonNull View itemView) {
             super(itemView);
+
             tvRank = itemView.findViewById(R.id.tv_rank);
             ivIcon = itemView.findViewById(R.id.iv_icon);
             tvName = itemView.findViewById(R.id.tv_name);
